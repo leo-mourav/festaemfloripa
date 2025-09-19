@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festa em Floripa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <section class="divsdoheader">
+            <div class="divdalogo">
+                <!-- COLOCAR UMA IMAGEM DE LOGO -->
+            </div>
+            <div class="divnav">
+                <nav>
+                    <a target="_blank" href="https://www.instagram.com/leonardolveiga/">INSTAGRAM <img id="insta"
+                            src="./instalaranja.png" alt="logoinstagram"></a>
+                    <!-- <a href="#">SEU PRESENTE <img id="gift" src="./gift.png" alt="seupresente"></a> -->
+                    <!-- <a href="#">LISTAS EXCLUSIVAS <img id="vip" src="./vip.png" alt="imagem vip"></a> -->
+                    <a id="abrirform" href="#">NOME NA LISTA <img id="bonus" src="./listabobus.png"
+                            alt="listabonus"></a>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="titulo" id="titulo">
+            <div class="titulodiv" id="titulodiv">
+                <h1>FESTA <span class="menor">EM</span> FLORIPA</h1>
+                <p>Aqui você encontra os melhores rolês de Floripa! Shows, baladas, afters, folias e com a chance de
+                    ganhar cortesias para você e a galera!</p>
+            </div>
+        </section>
+
+
+
+        <section class="eventos" id="eventos">
+            <div class="eventoscards" id="eventoscards" onmouseover="startscroll()" onmouseout="stopscroll()">
+
+                <div class="card">
+                    <img src="./entireita.jpg" alt="Foto">
+                </div>
+                <div class="card">
+                    <img src="./floia.png" alt="foto">
+                </div>
+                <div class="card">
+                    <img src="./heaven.jpg" alt="foto">
+                </div>
+                <div class="card">
+                    <img src="./floriparock.png" alt="foto">
+                </div>
+                <div class="card">
+                    <img src="./mafia.png" alt="foto">
+                </div>
+                <div class="card">
+                    <img src="./cliente.jpg" alt="foto">
+                </div>
+                <div class="card">
+                    <img src="./papas.png" alt="foto">
+                </div>
+                <div class="card">
+                    <img src="./safari.png" alt="foto">
+                </div>
+                <div class="card">
+                    <img src="./reveillon safari - last tickets.png" alt="foto">
+                </div>
+                <div class="card">
+                    <img src="./45 Dias - Story.png" alt="foto">
+                </div>
+                <div class="card">
+                    <img src="./45 Dias - Story.png" alt="foto">
+                </div>
+                <div class="card">
+                    <img src="./45 Dias - Story.png" alt="foto">
+                </div>
+                <div class="card">
+                    <img src="./45 Dias - Story.png" alt="foto">
+                </div>
+
+            </div>
+
+            <div class="botaowhats">
+                <a class="botao" id="botao" target="_blank" href="https://wa.me/5548991286349">
+                    CHAMAR PROMOTER <img src="./whats.png" alt="logowhats">
+                </a>
+            </div>
+        </section>
+    </main>
+
+
+    <section>
+        <div class="divform">
+            <form id="formulario"
+                action="https://script.google.com/macros/s/AKfycbyDuR4CSMiFz8qM7sd-d3uSbRCv2K-B3xDiBmAfYGwQLgj4B1dwL68rNud1jTKFuMhl4A/exec"
+                method="post" target="hidden_iframe">
+
+                <label for="pergunta">Informe o nome do evento: <input type="text" name="nomedoevento" id="nomedoevento"
+                        required></label>
+
+
+
+                <label for="nome">Nome completo: <input type="text" name="nome" id="txtnome" required></label>
+                <label for="email">Email Ativo: <input type="email" name="email" id="txtemail" required></label>
+                <label for="cpf">CPF: <input type="number" name="cpf" id="txtcpf" required></label>
+                <label for="telefone">Celular com DDD: <input type="number" name="telefone" id="txtcel" required>
+                </label>
+                <button type="submit">ENTRAR NA LISTA</button>
+                <button type="button" id="fecharform">FECHAR</button>
+
+            </form>
+            <iframe name="hidden_iframe" style="display:none;"></iframe>
+        </div>
+    </section>
+
+    <script>
+
+        let btn = document.getElementById('abrirform');
+        let form = document.getElementById('formulario');
+
+        btn.onclick = function () {
+            form.style.display = 'block';
+        }
+
+        let iframe = document.getElementsByName('hidden_iframe')[0];
+        form.onsubmit = function (e) {
+            alert('Você está na lista! Lembre-se de chegar antes de 00:00.');
+            form.style.display = 'none';
+        };
+        let fechar = document.getElementById('fecharform');
+
+        fechar.onclick = function () {
+            form.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
