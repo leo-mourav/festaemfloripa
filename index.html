@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festa em Floripa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <section class="divsdoheader">
+            <div class="divdalogo">
+                <!-- COLOCAR UMA IMAGEM DE LOGO -->
+            </div>
+            <div class="divnav">
+                <nav>
+                    <a target="_blank" href="https://www.instagram.com/leonardolveiga/">INSTAGRAM <img id="insta"
+                            src="./imagens/instalaranja.png" alt="logoinstagram"></a>
+                    <!-- <a href="#">SEU PRESENTE <img id="gift" src="./gift.png" alt="seupresente"></a> -->
+                    <!-- <a href="#">LISTAS EXCLUSIVAS <img id="vip" src="./vip.png" alt="imagem vip"></a> -->
+                    <a id="abrirform">NOME NA LISTA <img id="bonus" src="./imagens/listabobus.png" alt="listabonus"></a>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="titulo" id="titulo">
+            <div class="titulodiv" id="titulodiv">
+                <h1>FESTA <span class="menor">EM</span> FLORIPA</h1>
+                <p>Aqui você encontra os melhores rolês de Floripa! Shows, baladas, afters, folias e com a chance de
+                    ganhar cortesias para você e a galera!</p>
+            </div>
+        </section>
+
+
+
+        <section class="eventos" id="eventos">
+            <div class="eventoscards" id="eventoscards" onmouseover="startscroll()" onmouseout="stopscroll()">
+                <div class="card injecaoeletronica">
+                    <img src="./imagens/injecaoeletro.png" alt="foto">
+                </div>
+                <div class="card festaheaven">
+                    <img src="./imagens/heaven.jpg" alt="foto">
+                </div>
+                <div class="card festad48">
+                    <img src="./imagens/d48.jpg" alt="foto">
+                </div>
+                <div class="card festafolianopolis">
+                    <img src="./imagens/folianopolis.png" alt="foto">
+                </div>
+                <div class="card festasafari">
+                    <img src="./imagens/safari.png" alt="foto">
+                </div>
+                <div class="card simonemendes">
+                    <img src="./imagens/mendes.jpg" alt="foto">
+                </div>
+
+
+
+            </div>
+
+            <div class="botaowhats">
+                <a class="botao" id="botao" target="_blank" href="https://wa.me/5548991286349">
+                    CHAMAR PROMOTER <img src="./imagens/whats.png" alt="logowhats">
+                </a>
+            </div>
+        </section>
+    </main>
+
+
+    <section>
+        <div class="divform">
+            <form id="formulario"
+                action="https://script.google.com/macros/s/AKfycbyDuR4CSMiFz8qM7sd-d3uSbRCv2K-B3xDiBmAfYGwQLgj4B1dwL68rNud1jTKFuMhl4A/exec"
+                method="post" target="hidden_iframe">
+
+                <h2>TERRAZA /// ROLÊ D48 /// SAFARI BEACH JURERÊ </h2>
+                <label for="pergunta"><span>Informe o nome do evento <img src="./imagens/seta.png"
+                            alt="seta"></span><input type="text" name="nomedoevento" id="nomedoevento" required></label>
+                <label for="nome"><span>Nome completo <img src="./imagens/seta.png" alt="seta"> </span><input
+                        type="text" name="nome" id="txtnome" required></label>
+                <label for="email"><span>Email Ativo <img src="./imagens/seta.png" alt="seta"> </span><input
+                        type="email" name="email" id="txtemail" required></label>
+                <label for="cpf"><span>CPF <img src="./imagens/seta.png" alt="seta"></span><input type="number"
+                        name="cpf" id="txtcpf" required></label>
+                <label for="telefone"><span>Celular com DDD <img src="./imagens/seta.png" alt="seta"></span><input
+                        type="number" name="telefone" id="txtcel" required>
+                </label>
+                <button type="submit">ENTRAR NA LISTA</button>
+                <button type="button" id="fecharform">FECHAR</button>
+
+            </form>
+            <iframe name="hidden_iframe" style="display:none;"></iframe>
+        </div>
+    </section>
+
+    <script>
+
+        // --------------------- FORM.
+        let btn = document.getElementById('abrirform');
+        let form = document.getElementById('formulario');
+        let overlay = document.querySelector('.divform');
+        let fechar = document.getElementById('fecharform');
+
+
+        btn.onclick = function () {
+            overlay.style.display = 'flex';
+            form.style.display = 'flex';
+
+        }
+
+        overlay.onclick = function (e) {
+            if (e.target == overlay) { // Se for clicado no fundo. //
+                overlay.style.display = 'none';
+                form.style.display = 'none';
+            }
+        }
+        fechar.onclick = function () {
+            overlay.style.display = 'none';
+            form.style.display = 'none';
+        }
+
+        form.onsubmit = function (e) {
+            alert('Você está na lista! Lembre-se de chegar antes de 00:00.');
+            overlay.style.display = 'none';
+            form.style.display = 'none';
+        }
+        // ---------------------------- CARDS. 
+        const eventos = {
+            festaheaven: 'https://www.blueticket.com.br/evento/38847?c=leonardolveiga',
+            festad48: '',
+            injecaoeletronica: 'https://www.blueticket.com.br/evento/39042?c=leonardolveiga',
+            festafolianopolis: 'https://www.blueticket.com.br/evento/36655?c=leonardolveiga',
+            festasafari: 'https://www.blueticket.com.br/evento/38926?c=leonardolveiga',
+            simonemendes: 'https://www.blueticket.com.br/evento/38653?c=leonardolveiga'
+        }
+
+        const card = document.querySelectorAll('.card');
+        card.forEach(function (card) {
+            card.addEventListener('click', function () {
+                const chave = card.classList[1];
+                const url = eventos[chave];
+
+                if (url) {
+                    window.open(url, '_blank')
+                } else {
+                    window.alert('Abertura de vendas em breve, consulte no INSTAGRAM.')
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

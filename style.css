@@ -1,0 +1,478 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    /*background: url(./backgroundfloripa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    background: linear-gradient(rgba(0, 0, 0, 0.103)),
+        url('./imagens/backgroundfloripa.png') no-repeat center center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.divsdoheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divnav {
+    margin-right: 150px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.divnav nav {
+    display: flex;
+    margin-right: 0 auto;
+    background-image: linear-gradient(to right, #f56c3b9a, #00799e8e);
+    padding: 0.1px 5px 12px 15px;
+    border-radius: 30px 5px;
+}
+
+nav a {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.7em;
+    font-weight: 450;
+
+}
+
+nav a #vip {
+    width: 25px;
+    height: 25px;
+    padding-left: 5px;
+}
+
+nav a #insta {
+    width: 25px;
+    height: 25px;
+    padding-left: 5px;
+}
+
+nav a #bonus {
+    width: 20px;
+    height: 20px;
+    padding-left: 5px;
+}
+
+nav a #gift {
+    width: 20px;
+    height: 20px;
+    padding-left: 5px;
+}
+
+
+/* --------------- RESPONSIVIDADE ----------------- */
+@media (max-width: 768px) {
+    .divnav {
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 10px;
+        padding: 0 10px;
+    }
+
+    .divnav nav {
+        flex-direction: column;
+        /* empilha os links */
+        padding: 10px;
+        gap: 10px;
+        align-items: center;
+        /* centraliza links */
+    }
+
+    .divnav nav a {
+        font-size: 14px;
+    }
+}
+
+/* --------------- RESPONSIVIDADE -------------- */
+nav a {
+    text-decoration: none;
+    margin-right: 40px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.548);
+    transition: all 0.5s ease;
+}
+
+nav a:hover {
+    transform: scale(1.2);
+    font-weight: 550;
+    transition: transform 0.7s ease;
+}
+
+#abrirform {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.divdalogo img {
+    margin-left: 40px;
+    margin-top: 10px;
+
+}
+
+/* ------------------------------------------------------------- */
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 300px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.eventos {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.eventoscards {
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 64px;
+    scroll-behavior: smooth;
+    position: relative;
+    scrollbar-width: none;
+    padding-left: 150px;
+    position: relative;
+    padding-right: 150px;
+
+}
+
+.setas {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+
+}
+
+.eventoscards::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .eventoscards {
+        gap: 8px;
+    }
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 100px;
+    transition: transform 0.6s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.8);
+    z-index: 150;
+    cursor: pointer;
+
+}
+
+.card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 16px;
+}
+
+
+.titulo {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 80px 80px 1px;
+
+}
+
+.titulodiv {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+
+
+/* --------------- RESPONSIVIDADE ------------ */
+
+@media (max-width: 768px) {
+    .titulo {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .titulo h1 {
+        font-size: 40px;
+
+    }
+
+    .titulo h1 .menor {
+        font-size: 20px;
+    }
+}
+
+/* Tablets grandes e laptops médios */
+
+@media (max-width: 1024px) {
+    .divnav {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .titulo {
+        padding: 30px 40px 60px 20px;
+    }
+
+    .eventoscards {
+        padding: 60px 30px 40px 30px;
+        gap: 12px;
+    }
+
+    .card {
+        width: 90px;
+    }
+
+    .setas {
+        padding: 8px 12px;
+    }
+
+    .botaowhats {
+        padding: 12px 28px;
+    }
+}
+
+/* Smartphones pequenos / telas muito estreitas */
+
+@media (max-width: 480px) {
+    .titulo {
+        padding: 15px 10px 20px 10px;
+    }
+
+    .titulo h1 {
+        font-size: clamp(20px, 10vw, 36px);
+    }
+
+    .titulo h1 .menor {
+        font-size: clamp(12px, 5vw, 24px);
+    }
+
+    .eventoscards {
+        padding: 15px 5px 5px 5px;
+        gap: 6px;
+    }
+
+    .card {
+        width: 60px;
+    }
+
+    .setas {
+        padding: 4px 5px;
+        gap: 6px;
+    }
+
+    .botaowhats {
+        padding: 8px 16px;
+    }
+
+    .titulodiv p {
+        font-size: 16px;
+        max-width: 180px;
+    }
+}
+
+/* ----------- RESPONSIVIDADE ------------- */
+
+
+
+.titulo h1 {
+    text-align: left;
+    font-size: clamp(32px, 6vw, 80px);
+    padding-top: 5px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    word-spacing: -5px;
+    color: #077791e7;
+    text-shadow: 1px 4px 3px rgba(0, 0, 0, 0.479);
+}
+
+.titulo h1 .menor {
+    font-size: clamp(18px, 3vw, 40px);
+    text-shadow: 0.5px 4px 3px rgba(0, 0, 0, 0.479);
+}
+
+.botaowhats {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulodiv p {
+    font-size: 18px;
+    max-width: 250px;
+    /* color: rgba(248, 248, 248, 0.808); */
+    font-weight: 600;
+    color: #034958e7;
+    text-shadow: 2px rgba(41, 40, 40, 0.479);
+}
+
+.botaowhats {
+    display: inline-block;
+    background-color: white;
+    padding: 15px 32px;
+    width: fit-content;
+    margin: 0 auto;
+    background-image: linear-gradient(to right, #0d4351bd, #25d365ce);
+    border-radius: 30px 5px;
+    opacity: 0.8;
+    transition: all 0.4s ease;
+
+}
+
+.botaowhats:hover {
+    opacity: 1;
+    transform: scaleX(1.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+
+}
+
+.botaowhats a {
+    text-decoration: none;
+}
+
+.botaowhats a img {
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+
+}
+
+
+body {
+    overflow-x: hidden;
+}
+
+#formulario {
+    display: none;
+    flex-direction: column;
+    gap: 24px;
+    padding: 3em;
+    padding-bottom: 4em;
+    background-color: #03738C;
+    border-radius: 24px;
+    z-index: 9999;
+    border: 5px solid #0b90ad67;
+}
+
+#formulario input {
+    background-color: #03738c6e;
+    ;
+    border-radius: 12px;
+    padding: 8px;
+
+}
+
+#formulario label {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+label span {
+    background-color: #12303631;
+    border-radius: 16px;
+    padding: 4px 20px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    opacity: 0.8;
+    transition: all 0.4s ease;
+}
+
+#formulario.ativo {
+    display: flex;
+}
+
+.divform {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* fundo semitransparente */
+    z-index: 9998;
+}
+
+label span {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+
+}
+
+#formulario button {
+    background-color: #60c5db6e;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 10px;
+    display: inline-block;
+    justify-content: center;
+    cursor: pointer;
+    width: auto;
+    align-self: center;
+    align-items: center;
+}
+
+span img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Arrumar o parágrafo - ver tutorial do Gu Campelo sobre as letras interagirem com o background.
+as sections estão se sobrepondo, o card fica desaparecendo.
+fazer um logo pra "festa em floripa" 
+Conectar o site/cupom blueticket nos cards. JAVASCRIPT!!!!!!!!!!!!!!
+
+Colocar o projeto no GITHUB. 
+
+código de implantação:
+AKfycbzVuMIG-VsmiKTJvXGOfMbUG_wsCVrPRa8Iped6e-ZG0nNS_zBIsieBT43p8xUl5CgDpg
+
+URL:
+https://script.google.com/macros/s/AKfycbzVuMIG-VsmiKTJvXGOfMbUG_wsCVrPRa8Iped6e-ZG0nNS_zBIsieBT43p8xUl5CgDpg/exec
+*/
