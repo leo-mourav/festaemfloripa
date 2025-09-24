@@ -302,6 +302,36 @@ main {
         max-width: 180px;
     }
 }
+/* MEDIA QUERY PARA CELULARES PEQUENOS */
+@media (max-width: 480px) {
+
+    /* BODY: mostra o background só na parte média */
+    body {
+        background-position: center 40%;
+        /* centraliza na parte média vertical */
+        background-size: 120% auto;
+        /* aumenta um pouco a imagem para cobrir bem */
+    }
+
+    /* EVENTOS CARDS: aumentar tamanho para melhor visualização */
+    .eventoscards {
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 12px;
+    }
+
+    .card {
+        width: 120px;
+        /* aumenta o card */
+        transition: transform 0.4s ease;
+    }
+
+    .card img {
+        max-width: 120px;
+        border-radius: 16px;
+    }
+}
 
 /* ----------- RESPONSIVIDADE ------------- */
 
