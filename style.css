@@ -316,6 +316,10 @@ main {
         flex-direction: column;
     }
 
+    .eventoscards {
+        padding-top: 16px;
+    }
+
     main {
         flex: 1;
         /* ocupa o espaço da tela */
@@ -357,8 +361,7 @@ main {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 16px;
-    }
+        gap: 12px;
 
     .card {
         width: 140px;
