@@ -311,59 +311,72 @@ main {
         background-position: center top;
         background-size: cover;
         min-height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
     }
 
     main {
+        flex: 1;
+        /* ocupa o espaço da tela */
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        /* centraliza vertical */
         align-items: center;
-        gap: 24px;
-        /* espaço padrão entre os blocos */
+        /* centraliza horizontal */
+        gap: 20px;
+        /* espaço entre elementos */
     }
 
-    /* TÍTULO */
+    /* TÍTULO acima */
     .titulo {
         order: -1;
         text-align: center;
         padding: 10px;
-        margin-bottom: 10px;
-        /* afasta do próximo bloco */
     }
 
     .titulo h1 {
         font-size: clamp(24px, 8vw, 40px);
     }
 
-    /* Some o <p> */
+    /* some o <p> */
     .titulodiv p {
         display: none;
     }
 
-    /* CARDS */
-    .eventoscards {
-        padding: 10px;
+    /* SECTION EVENTOS bem no meio */
+    .eventos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
-        /* mais espaço entre os cards */
+    }
+
+    .eventoscards {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
+        gap: 16px;
     }
 
     .card {
-        width: 150px;
+        width: 140px;
     }
 
     .card img {
-        max-width: 150px;
+        max-width: 140px;
     }
 
-    /* BOTÃO */
+    /* BOTÃO logo abaixo */
     .botaowhats {
-        margin-top: 20px;
-        /* distância dos cards */
+        margin-top: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 }
+
 /* ----------- RESPONSIVIDADE ------------- */
 
 
