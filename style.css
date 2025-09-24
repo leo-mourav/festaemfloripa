@@ -14,7 +14,9 @@ body {
     background-position: center center;
     background-size: cover;
 }
-
+body {
+    background-color: red;
+}
 * {
     margin: 0;
     padding: 0;
