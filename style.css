@@ -308,50 +308,62 @@ main {
 /* MEDIA QUERY PARA CELULARES PEQUENOS */
 @media (max-width: 480px) {
     body {
-        background: url('./imagens/bgmedia.png');
         background-position: center top;
         background-size: cover;
-        /* cobre toda a tela sem cortar estranho */
         min-height: 100vh;
-        /* garante altura total da viewport */
     }
 
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        /* espaço padrão entre os blocos */
+    }
+
+    /* TÍTULO */
     .titulo {
         order: -1;
         text-align: center;
         padding: 10px;
+        margin-bottom: 10px;
+        /* afasta do próximo bloco */
     }
 
     .titulo h1 {
         font-size: clamp(24px, 8vw, 40px);
     }
 
+    /* Some o <p> */
     .titulodiv p {
         display: none;
     }
 
+    /* CARDS */
     .eventoscards {
-        padding: 20px 10px;
-        gap: 16px;
+        padding: 10px;
+        gap: 20px;
+        /* mais espaço entre os cards */
         justify-content: center;
     }
 
     .card {
-        width: 140px;
+        width: 150px;
     }
 
     .card img {
-        max-width: 140px;
+        max-width: 150px;
     }
 
+    /* BOTÃO */
     .botaowhats {
         margin-top: 20px;
+        /* distância dos cards */
         display: flex;
         justify-content: center;
         align-items: center;
     }
 }
-
 /* ----------- RESPONSIVIDADE ------------- */
 
 
