@@ -333,7 +333,7 @@ main {
     .titulo {
         order: -1;
         text-align: center;
-        padding: 10px;
+        padding: 10px 10px 0px 10px;
     }
 
     .titulo h1 {
@@ -370,7 +370,7 @@ main {
 
     /* BOTÃO logo abaixo */
     .botaowhats {
-        margin-top: 10px;
+        margin-top: 16px;
         display: flex;
         justify-content: center;
         align-items: center;
