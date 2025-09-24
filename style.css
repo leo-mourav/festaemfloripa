@@ -308,6 +308,7 @@ main {
 /* MEDIA QUERY PARA CELULARES PEQUENOS */
 @media (max-width: 480px) {
     body {
+        background: url('./imagens/bgmedia.png');
         background-position: center top;
         background-size: cover;
         /* cobre toda a tela sem cortar estranho */
