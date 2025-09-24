@@ -5,12 +5,14 @@
 
 body {
     font-family: "Noto Sans", sans-serif;
-    /*background: url(./backgroundfloripa.png);
-    background-position: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.103), rgba(0, 0, 0, 0.103)),
+        url('./imagens/backgroundfloripa.png');
     background-repeat: no-repeat;
-    background-size: cover;*/
-    background: linear-gradient(rgba(0, 0, 0, 0.103)),
-        url('./imagens/backgroundfloripa.png') no-repeat center center;
+    background-position: center center;
+    background-size: cover;
 }
 
 * {
