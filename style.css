@@ -307,17 +307,16 @@ main {
 
 /* MEDIA QUERY PARA CELULARES PEQUENOS */
 @media (max-width: 480px) {
-
-    /* BODY estilo story */
     body {
         background-position: center top;
-        background-size: auto 100%;
+        background-size: cover;
+        /* cobre toda a tela sem cortar estranho */
+        min-height: 100vh;
+        /* garante altura total da viewport */
     }
 
-    /* TÍTULO acima dos cards */
     .titulo {
         order: -1;
-        /* sobe acima dos cards */
         text-align: center;
         padding: 10px;
     }
@@ -326,12 +325,10 @@ main {
         font-size: clamp(24px, 8vw, 40px);
     }
 
-    /* Esconde o parágrafo */
     .titulodiv p {
         display: none;
     }
 
-    /* CARDS maiores para clicar melhor */
     .eventoscards {
         padding: 20px 10px;
         gap: 16px;
@@ -340,14 +337,12 @@ main {
 
     .card {
         width: 140px;
-        /* aumenta tamanho do card */
     }
 
     .card img {
         max-width: 140px;
     }
 
-    /* BOTÃO abaixo dos cards */
     .botaowhats {
         margin-top: 20px;
         display: flex;
