@@ -307,9 +307,9 @@ main {
 
     /* BODY: mostra o background só na parte média */
     body {
-        background-position: center 40%;
+        background-position: center top;
         /* centraliza na parte média vertical */
-        background-size: 120% auto;
+        background-size: auto 100%;
         /* aumenta um pouco a imagem para cobrir bem */
     }
 
